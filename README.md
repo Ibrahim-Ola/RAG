@@ -7,5 +7,5 @@ This repository contains an introduction to Retrieval Augmented Generation (RAG)
 1. RAG101: This is a beginners level introduction to RAG with LangChain. You will learn how to:
     * Load open source models using the Huggingface API in Langchain.
     * Prompt your loaded models.
-    * Augment the LLM's knowledge with private data in a naive "way".  
+    * Augment the LLM's knowledge with private data in a "naive way".  
 

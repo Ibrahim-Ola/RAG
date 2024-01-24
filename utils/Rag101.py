@@ -23,6 +23,7 @@ load_dotenv() # take environment variables from .env.
 api_key = os.getenv("Huggingface_API_key")
 model_id = "mistralai/Mixtral-8x7B-Instruct-v0.1" # the model id on 🤗
 
+warnings.filterwarnings('ignore')
 transformers.utils.logging.set_verbosity(40)
 transformers.utils.logging.disable_progress_bar()
 
@@ -158,14 +159,17 @@ class NaiveRAG:
         return result['text'].strip()
     
 if __name__ == "__main__":
+
+    # Running the script on a command-line only supports question without contex.
+
     rag = NaiveRAG()
     query = None
 
     if len(sys.argv) > 1:
         query = sys.argv[1]
 
+    print(">> Bot: How can I help you today?")
     while True:
-        print(">> Bot: How can I help you today?")
         if query is None:
             query = input(">> User: ")
 

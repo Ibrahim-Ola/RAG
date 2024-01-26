@@ -8,9 +8,10 @@ Email: ibrahimolalekana@u.boisestate.edu
 Institution: Boise State University
 """
 
+import re
 import sys
 
-from rag101 import NaiveRAG
+from utils.rag101 import NaiveRAG
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain.memory import ConversationBufferMemory
@@ -72,11 +73,15 @@ class ChatBot(NaiveRAG):
             memory=memory
         )
         return conversation
+
+    def remove_prefix(self, text, prefix="AI Assistant:"):
+        pattern = r'^' + re.escape(prefix) + r'\s*'
+        return re.sub(pattern, '', text)
     
     def qa(self, question: str) -> str:
 
         response = self.conversation_chain({"input": question})
-        return response['text'].strip()
+        return self.remove_prefix(response['text'].strip())
     
 
 if __name__ == "__main__":
@@ -99,5 +104,5 @@ if __name__ == "__main__":
                 print(">> Bot: Goodbye!")
                 sys.exit(0)
         response = bot.qa(question=query)
-        print(response)
+        print(f">> Bot: {response}")
         query = None

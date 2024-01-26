@@ -115,10 +115,10 @@ class NaiveRAG:
                 "Avoid harmful,unethical, prejudiced, or negative content. Ensure replies promote fairness and positivity."
             )
             
-            instruction = f"{safety_prompt}\n\n{context_instruction} \n\nquestion:{instruction}"
+            instruction = f"{safety_prompt}\n\n{context_instruction} \n\nquestion: {instruction}"
 
         else:
-            instruction = f"{context_instruction} \n\nquestion:{instruction}"
+            instruction = f"{context_instruction} \n\nquestion: {instruction}"
         
         chat = [
             {"role": "user", "content": "Hello, how are you?"},

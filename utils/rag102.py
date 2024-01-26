@@ -10,8 +10,7 @@ Institution: Boise State University
 
 import sys
 
-
-from utils.rag101 import NaiveRAG
+from rag101 import NaiveRAG
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain.memory import ConversationBufferMemory
@@ -69,7 +68,7 @@ class ChatBot(NaiveRAG):
         conversation = LLMChain(
             llm=self.model,
             prompt=prompt_template,
-            verbose=True,
+            verbose=False,
             memory=memory
         )
         return conversation

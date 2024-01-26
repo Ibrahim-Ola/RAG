@@ -91,3 +91,14 @@ if __name__ == "__main__":
         query = sys.argv[1]
 
     print(">> Bot: How can I help you today?")
+
+    while True:
+        if query is None:
+            query = input(">> User: ")
+
+            if query in ["exit", "quit", "q", "q()"]:
+                print(">> Bot: Goodbye!")
+                sys.exit(0)
+        response = bot.qa(question=query)
+        print(response)
+        query = None

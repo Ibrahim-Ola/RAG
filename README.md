@@ -11,7 +11,7 @@ This repository contains an introduction to Retrieval Augmented Generation (RAG)
     * Go to [RAG101](https://github.com/Ibrahim-Ola/RAG/blob/main/RAG101/RAG101.ipynb).  
 
 2. RAG102: This part introduces the key componenet of a conversation - memory. You will learn:
-    * The different kinds of memory supported by LangChain.
+    * The different kinds of memory algorithm  supported by LangChain.
     * Add memory to retrievals in LangChain to enable conversation.
-    * 
+    * Go to [RAG102](https://github.com/Ibrahim-Ola/RAG/blob/main/RAG102/RAG102.ipynb).
 

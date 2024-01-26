@@ -15,3 +15,36 @@ This repository contains an introduction to Retrieval Augmented Generation (RAG)
     * Add memory to retrievals in LangChain to enable conversation.
     * Go to [RAG102](https://github.com/Ibrahim-Ola/RAG/blob/main/RAG102/RAG102.ipynb).
 
+
+
+## Usage
+
+### 1. Setup the environment
+
+```{bash}
+mkdir RAG
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+```
+
+### 2. Clone the Repository
+
+```{bash}
+git clone https://github.com/Ibrahim-Ola/RAG.git
+cd RAG
+```
+
+### 3. Install Source Code in Editable Mode 
+
+```{bash}
+pip install -e .
+```
+
+### 4. Deactivate Environment
+
+After running the experiments, you can deactivate the virtual environment by running the command below.
+
+```{bash}
+deactivate
+```

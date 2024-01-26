@@ -177,5 +177,5 @@ if __name__ == "__main__":
                 print(">> Bot: Goodbye!")
                 sys.exit(0)
         response = rag.qa(question=query)
-        print(response)
+        print(f">> Bot: {response}")
         query = None

@@ -40,7 +40,8 @@ def setup_package():
             "accelerate==0.26.1",
             "transformers==4.36.2",
             "python-dotenv==1.0.0",
-            "bitsandbytes==0.42.0"
+            "bitsandbytes==0.42.0",
+            "sentence-transformers==2.3.1"
         ],
         classifiers=[
             "Development Status :: 4 - Beta",

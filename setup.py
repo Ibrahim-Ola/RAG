@@ -37,6 +37,7 @@ def setup_package():
         install_requires=[
             "torch==2.1.2",
             "langchain==0.1.1",
+            "chromadb==0.4.22",
             "accelerate==0.26.1",
             "transformers==4.36.2",
             "python-dotenv==1.0.0",
